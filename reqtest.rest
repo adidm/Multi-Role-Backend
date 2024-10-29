@@ -1,0 +1,120 @@
+//Users
+
+//get all user
+GET http://localhost:5000/users
+Content-Type: application/json
+
+###
+//register admin
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "adipratama",
+    "email" : "adipratama12@gmail.com",
+    "password" : "112233",
+    "confPassword" : "112233",
+    "role" : "admin"
+}
+
+###
+//register user
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "jhon doe",
+    "email" : "jhondoe@gmail.com",
+    "password" : "112233",
+    "confPassword" : "112233",
+    "role" : "user"
+}
+
+###
+//get user by id
+GET http://localhost:5000/users/2e758b19-1595-4513-9a64-cecef3a0282c
+Content-Type: application/json
+
+###
+//update user
+PATCH http://localhost:5000/users/aa029bc7-50a0-48ab-accd-e33938f7866e
+Content-Type: application/json
+
+{
+    "name": "adipratama",
+    "email": "adipratama@gmail.com",
+    "password" : "11223344",
+    "confPassword" : "11223344",
+    "role": "admin"
+}
+
+###
+//delete user
+DELETE http://localhost:5000/users/2e758b19-1595-4513-9a64-cecef3a0282c
+Content-Type: application/json
+
+###
+//session (login, me, logout)
+
+//me
+GET http://localhost:5000/me
+
+###
+//login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "adipratama12@gmail.com",
+    "password" : "112233"
+}
+
+###
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "jhondoe@gmail.com",
+    "password" : "112233"
+}
+
+###
+//logout
+DELETE http://localhost:5000/logout
+
+###
+//Products
+
+//get all product
+GET http://localhost:5000/products
+
+###
+//create product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Hoodie Programming",
+    "price" : 300000
+}
+
+###
+//get product by id
+GET http://localhost:5000/products/69dd4ecc-0b9d-4c8c-b9ed-ed16582dbd5b
+Content-Type: application/json
+
+###
+// update produk
+PATCH  http://localhost:5000/products/69dd4ecc-0b9d-4c8c-b9ed-ed16582dbd5b
+Content-Type: application/json
+
+{
+    "name" : "Programming Hoodie",
+    "price" : 320000
+}
+
+###
+// delete product
+DELETE  http://localhost:5000/products/d8b05585-f0fb-450a-80b7-133d1ea88fb6
+Content-Type: application/json
